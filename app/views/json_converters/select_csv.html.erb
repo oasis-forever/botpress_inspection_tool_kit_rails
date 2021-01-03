@@ -1,0 +1,8 @@
+<h1>Learning Data Converter from CSV to JSON</h1>
+<%= form_with url: json_converters_download_path, method: :post, multipart: true do |f| %>
+  <div class="container">
+    <p><%= f.label :csv_learning_data, 'Choose CSV Learning Data' %></p>
+    <p><%= f.file_field :csv_learning_data, accept: '.csv' %></p>
+    <p><%= f.submit 'Export JSON', class: 'btn btn-primary' %></p>
+  </div>
+<% end %>
