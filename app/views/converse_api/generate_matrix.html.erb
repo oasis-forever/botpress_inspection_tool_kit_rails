@@ -1,0 +1,23 @@
+<h1>Matrix Chart of Confidence</h1>
+<p><%= link_to 'Export CSV', converse_api_export_matrix_path, method: :post, class: 'btn btn-primary' %></p>
+<div class="scroll-table">
+  <table>
+    <% if @matrix %>
+      <% @matrix.each do |matrix| %>
+        <tr>
+          <% matrix.each do |row| %>
+            <th class=<%= evaluate_confidence(row) %>><%= row %></th>
+          <% end %>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+</div>
+
+<div class="legend">
+  <h2>Legend</h2>
+  <p class="excellent">Greater than or Equal to 70.0%</p>
+  <p class="good">Greater than or Equal to 50.0% and less than 70.0%</p>
+  <p class="bad">Greater than or Equal to 30.0% and less than 50.0%</p>
+  <p class="useless">Greater than or Equal to 0.1% and less than 30.0%</p>
+</div>

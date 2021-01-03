@@ -146,3 +146,79 @@ label {
   border-top-right-radius: 4px;
 }
 
+.form-item {
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.notifications {
+  color: #ddd;
+  text-align: center;
+}
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.scroll-table {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+tr:first-child, th:first-child {
+  background-color: #000;
+  color: #fff;
+}
+
+.excellent {
+  background-color: #1971ff;
+  color: #fff;
+}
+
+.good {
+  background-color: #00b06b;
+}
+
+.bad {
+  background-color: #f2e700;
+}
+
+.useless {
+  background-color: #ff4b00;
+  color: #fff;
+}
+
+.legend {
+  max-width: 40%;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #ededed;
+}
+
+.legend h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.legend p {
+  margin: 0;
+  padding: 5px;
+}
