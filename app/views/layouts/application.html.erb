@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Botpress Inspection Tool Kit</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to 'Top', root_path, class: 'badge' %>
+    <div class="container">
+      <% if flash.notice %>
+        <div class="alert alert-success">
+          <%= flash.notice %>
+        </div>
+      <% end %>
+      <% if flash.alert %>
+        <div class="alert alert-danger">
+          <%= flash.alert %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
