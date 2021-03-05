@@ -1,9 +1,9 @@
 ## 1. Environment
 
 * WSL(Ubuntu 20.04.1 LTS (GNU/Linux 4.19.128-microsoft-standard x86_64))
-* ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin19]
-* Rails 6.1.0
-* Docker version 20.10.0, build 7287ab3
+* ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-linux]
+* Rails 6.1.3
+* Docker version 20.10.2, build 2291f61
 
 ## 2. Blog Post
 
@@ -33,7 +33,6 @@ $ git update-index --assume-unchanged bin/rails
 
 ![Data Communication Chart](https://github.com/oasis-forever/botpress_inspection_tool_kit_rails/blob/master/public/data-communication.png)
 
-
 ## 6. Attention
 
 ### 6-1. Host
@@ -44,3 +43,7 @@ Call Converse API with `{Your Private IP Address}:{Port}` because Rails server i
 
 If you carry out E2E test at once with `docker-compose exec app bundle exec rspec`, errors will be raised `./spec/system/converse_api_spec.rb:30` and `./spec/system/json_converters_spec.rb:17` because what downloaded file to refer to is dependent on the order of execution.  
 So run seperately `docker-compose exec app bundle exec rspec ./spec/system/converse_api_spec.rb` and `docker-compose exec app bundle exec rspec ./spec/system/json_converters_spec.rb`, and they will succeed.
+
+## 7. Production on Heroku
+
+[Botpress Inspection Tool Kit](https://oasist-botpress-tool-kit.herokuapp.com/)
