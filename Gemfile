@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.11.2'
 
 gem 'dotenv-rails', '~> 2.7.6'
 
-gem 'nokogiri', '~> 1.11.1'
+gem 'nokogiri', '~> 1.11.4'
 
 gem 'rexml', '~> 3.2.4'
 
