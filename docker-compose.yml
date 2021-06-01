@@ -16,5 +16,3 @@ services:
 volumes:
   bundle:
     driver: local
-  node_modules:
-    driver: local
