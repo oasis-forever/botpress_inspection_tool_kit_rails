@@ -1,6 +1,3 @@
-require 'csv'
-require 'json'
-
 class JsonConvertersController < ApplicationController
   include JsonGenerator
 

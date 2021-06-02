@@ -1,7 +1,3 @@
-require 'net/http'
-require 'json'
-require 'csv'
-
 class ConverseApiController < ApplicationController
   include ApiCaller
   include MatrixGenerator
