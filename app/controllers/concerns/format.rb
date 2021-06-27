@@ -21,7 +21,7 @@ module Format
   end
 
   def self.to_json(training_data)
-    learning_data = []
+    result = []
     hash_template = self.template
     CSV.foreach(training_data, headers: true) do |learning_datum|
       if hash_template[:data][:answers][:ja].last == learning_datum['Answers']
@@ -33,9 +33,9 @@ module Format
         hash_template[:data][:answers][:ja] << learning_datum['Answers']
       end
       hash_template[:data][:questions][:ja].uniq!
-      learning_data << hash_template
+      result << hash_template
     end
-    JSON.dump({ qnas: learning_data.uniq })
+    JSON.dump({ qnas: result.uniq })
   end
 
   def self.json_filename
