@@ -1,5 +1,5 @@
-module JsonGenerator
-  def gen_hash_template
+module Format
+  def self.template
     {
       id: '',
       data: {
@@ -20,14 +20,14 @@ module JsonGenerator
     }
   end
 
-  def generate_json_file(csv_learning_data)
+  def self.to_json(training_data)
     learning_data = []
-    hash_template = gen_hash_template
-    CSV.foreach(csv_learning_data, headers: true) do |learning_datum|
+    hash_template = self.template
+    CSV.foreach(training_data, headers: true) do |learning_datum|
       if hash_template[:data][:answers][:ja].last == learning_datum['Answers']
         hash_template[:data][:questions][:ja] << learning_datum['Questions']
       else
-        hash_template = gen_hash_template
+        hash_template =  template
         hash_template[:id] = learning_datum['Serial_Nums']
         hash_template[:data][:questions][:ja] << learning_datum['Questions']
         hash_template[:data][:answers][:ja] << learning_datum['Answers']
@@ -36,5 +36,9 @@ module JsonGenerator
       learning_data << hash_template
     end
     JSON.dump({ qnas: learning_data.uniq })
+  end
+
+  def self.json_filename
+    "training_data_#{DateTime.current.strftime('%F%T').gsub('-', '').gsub(':', '')}.json"
   end
 end

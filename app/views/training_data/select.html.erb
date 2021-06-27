@@ -1,0 +1,9 @@
+<h1>Training Data: CSV2JSON</h1>
+<%= form_with url: training_data_download_path, method: :post do |f| %>
+<%= render 'shared/errors', object: @training_data %>
+  <div class="container">
+    <p><%= f.label :training_data %></p>
+    <p><%= f.file_field :training_data, accept: '.csv' %></p>
+    <p><%= f.submit 'Export JSON', class: 'btn btn-primary' %></p>
+  </div>
+<% end %>

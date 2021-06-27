@@ -1,4 +1,4 @@
-## 2. Learning Data Converter from CSV to JSON
+## 2. Training Data: CSV2JSON
 
 ### 2-1. CSV -> JSON Conversion
 
