@@ -13,7 +13,7 @@ RSpec.describe "Top", type: :system do
 
     it 'enables users to get to json_converters_select_csv_path' do
       click_on 'Training Data: CSV2JSON'
-      expect(page).to have_current_path json_converters_select_csv_path
+      expect(page).to have_current_path training_data_select_path
     end
 
     it 'enables users to get to qa_inspectors_select_path' do
