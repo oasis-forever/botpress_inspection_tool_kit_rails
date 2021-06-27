@@ -27,7 +27,7 @@ module Format
       if hash_template[:data][:answers][:ja].last == training_datum['Answers']
         hash_template[:data][:questions][:ja] << training_datum['Questions']
       else
-        hash_template =  template
+        hash_template =  self.template
         hash_template[:id] = training_datum['Serial_Nums']
         hash_template[:data][:questions][:ja] << training_datum['Questions']
         hash_template[:data][:answers][:ja] << training_datum['Answers']
