@@ -23,14 +23,14 @@ module Format
   def self.to_json(training_data)
     result = []
     hash_template = self.template
-    CSV.foreach(training_data, headers: true) do |learning_datum|
-      if hash_template[:data][:answers][:ja].last == learning_datum['Answers']
-        hash_template[:data][:questions][:ja] << learning_datum['Questions']
+    CSV.foreach(training_data, headers: true) do |training_datum|
+      if hash_template[:data][:answers][:ja].last == training_datum['Answers']
+        hash_template[:data][:questions][:ja] << training_datum['Questions']
       else
         hash_template =  template
-        hash_template[:id] = learning_datum['Serial_Nums']
-        hash_template[:data][:questions][:ja] << learning_datum['Questions']
-        hash_template[:data][:answers][:ja] << learning_datum['Answers']
+        hash_template[:id] = training_datum['Serial_Nums']
+        hash_template[:data][:questions][:ja] << training_datum['Questions']
+        hash_template[:data][:answers][:ja] << training_datum['Answers']
       end
       hash_template[:data][:questions][:ja].uniq!
       result << hash_template
