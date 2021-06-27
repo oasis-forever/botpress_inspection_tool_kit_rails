@@ -16,9 +16,9 @@ RSpec.describe "Top", type: :system do
       expect(page).to have_current_path json_converters_select_csv_path
     end
 
-    it 'enables users to get to converse_api_select_data_path' do
-      click_on 'QA Inspection'
-      expect(page).to have_current_path converse_api_select_data_path
+    it 'enables users to get to qa_inspectors_select_path' do
+      click_on 'QA Inspector'
+      expect(page).to have_current_path qa_inspectors_select_path
     end
   end
 end

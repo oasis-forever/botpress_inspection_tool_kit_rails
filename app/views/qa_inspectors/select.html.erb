@@ -1,0 +1,32 @@
+<h1>Generate QA Inspector</h1>
+<%= form_with url: qa_inspectors_chart_path do |f| %>
+<%= render 'shared/errors', object: @qa_inspector %>
+  <div class="form-item">
+    <p><strong><%= f.label :scheme %></strong></p>
+    <p><%= f.select :scheme, [['http'], ['https']], { selected: 'http' } %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :host %></strong></p>
+    <p class="note">* Port is required in the local environment</p>
+    <p><%= f.text_field :host %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :bot_id %></strong></p>
+    <p><%= f.text_field :bot_id %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :user_id %></strong></p>
+    <p><%= f.text_field :user_id %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :access_token %></strong></p>
+    <p><%= f.text_area :access_token, size: '100x5' %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :test_data %></strong></p>
+    <p><%= f.file_field :test_data, accept: '.csv' %></p>
+  </div>
+  <div class="form-item">
+    <p><%= f.submit 'Get Chart', class: 'btn btn-primary' %></p>
+  </div>
+<% end %>

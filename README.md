@@ -25,8 +25,8 @@ $ git update-index --assume-unchanged bin/rails
 ## 4. Manual Documents
 
 1. [Top Page](https://github.com/oasis-forever/botpress_inspection_tool_kit_rails/blob/master/docs/01_top.md)
-3. [Matrix Chart of Confidence](https://github.com/oasis-forever/botpress_inspection_tool_kit_rails/blob/master/docs/03_converse-api.md)
 2. [Training Data: CSV2JSON](https://github.com/oasis-forever/botpress_inspection_tool_kit_rails/blob/master/docs/02_json-converter.md)
+3. [QA Inspector](https://github.com/oasis-forever/botpress_inspection_tool_kit_rails/blob/master/docs/03_converse-api.md)
 4. [Deploy Botpress Server to Heroku](https://github.com/oasis-forever/botpress_inspection_tool_kit_rails/blob/master/docs/04_deploy-botpress-server-to-heroku.md)
 
 ## 5. Data Communication Chart
